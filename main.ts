@@ -1,4 +1,6 @@
 import { parse } from "@std/csv/parse";
+import { People } from './People.ts';
+import type { PersonCsv } from './Person.ts';
 
 // open the CSV file as a stream
 const input = await Deno.open("Yamasaki Family Tree.csv", { read: true });
@@ -13,7 +15,8 @@ while (true) {
   if (result.done) {
     break;
   }
-  const lines = parse(decoder.decode(result.value), { skipFirstRow: true });
-  await Deno.writeTextFile("./output/people.json", JSON.stringify(lines, null, 2));
+  const peopleCsv = parse(decoder.decode(result.value), { skipFirstRow: true }) as PersonCsv[];
+  const people = new People(peopleCsv);
+  await Deno.writeTextFile("./output/people.json", JSON.stringify(people.list, null, 2));
 }
 
