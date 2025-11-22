@@ -10,6 +10,7 @@ export type PersonCsv = {
   mother: string;
   birth: string;
   spouse: string;
+  comment: string;
 }
 
 export enum Sex {
@@ -32,6 +33,7 @@ export class Person {
   sex: Sex;
   motherId: number;
   fatherId: number;
+  comment: string;
   children: number[];
   siblings: number[];
   spouses: number[];
@@ -48,6 +50,7 @@ export class Person {
     this.fatherId = parseInt(csv.father, 10) || -1;
     this.motherId = parseInt(csv.mother, 10) || -1;
     this.spouses = csv.spouse ? [parseInt(csv.spouse, 10)] : [];
+    this.comment = csv.comment;
     this.children = [];
     this.siblings = [];
     this.coparents = [];

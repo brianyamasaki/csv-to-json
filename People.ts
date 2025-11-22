@@ -13,7 +13,7 @@ export class People {
     this.assignCoparents();
   }
 
-  assignChildren() {
+  assignChildren(): void {
     this.list.forEach(person => {
       const father = person.fatherId;
       if (father > 1) {
@@ -26,7 +26,7 @@ export class People {
     })
   }
 
-  assignSiblings() {
+  assignSiblings(): void {
     this.list.forEach(person => {
       const father = person.fatherId;
       if (father > 1) {
@@ -46,7 +46,7 @@ export class People {
   }
 
   // assign shared parents as coparents
-  assignCoparents() {
+  assignCoparents(): void {
     this.list.forEach(person => {
       const father = person.fatherId;
       const mother = person.motherId;
@@ -57,11 +57,13 @@ export class People {
     })
   }
   
-  getList() {
+  getList(): Person[] {
     return this.list;
   }
   
-  getPerson(id: number) {
+  getPerson(id: number): Person {
     return this.list[id-2];
   }
+
 }
+
