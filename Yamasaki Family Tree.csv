@@ -82,7 +82,7 @@
 82,Iso,,,,イソ,F,,,,,
 83,Yasutaro,Yamasaki,,山崎,安太郎,M,,,1871,,
 84,Tama-ichi,Yamasaki,,山崎,玉市,M,,,,,
-85,Torakichi,Yamasaki,,山崎,寅吉,M,,,,,
+85,Torakichi,Yamasaki,,山崎,寅吉,M,83,82,,,
 86,Mankitchi,Yamamoto,,山本,万吉,,,,,87,
 87,Iso,,,,イソ,,,,,86,
 88,Kiwa,Yamamoto,,山本,キワ,F,86,87,,85,
@@ -115,3 +115,4 @@
 115,Shigemitsu?,?,,?,栄光,,,111,,,Several ways to pronounce
 116,Shouji,?,,?,祥爾,,,112,,,
 117,Saburo,Yamasaki,,山崎,三郎,,2,3,,,Died 11/20/1926
+118,Some,Shimamoto,,島本,ソメ ,,83,82,,,
